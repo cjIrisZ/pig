@@ -144,7 +144,7 @@ public class LoaderProcessor extends TezOpPlanVisitor {
             UDFContext.getUDFContext().serialize(conf);
             conf.set("udf.import.list",
                     ObjectSerializer.serialize(PigContext.getPackageImportList()));
-            conf.set(PigInputFormat.PIG_INPUTS, ObjectSerializer.serialize(inp));
+            conf.set(PigInputFormat.PIG_LOADS, ObjectSerializer.serialize(inp));
             conf.set(PigInputFormat.PIG_INPUT_TARGETS, ObjectSerializer.serialize(inpTargets));
             conf.set(PigInputFormat.PIG_INPUT_SIGNATURES, ObjectSerializer.serialize(inpSignatureLists));
             conf.set(PigInputFormat.PIG_INPUT_LIMITS, ObjectSerializer.serialize(inpLimits));
